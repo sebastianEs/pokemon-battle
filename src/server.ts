@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 
 const app = fastify( { logger: true } );
 
+app.get( "/", async () => { return { message: "Pokemon Battle API", version: "1.0.0" }; } );
+
 app.get( "/health", async () =>{ return { status: "OK" }; } );
 
 const start = async () => {
