@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2025",
+        "module": "commonjs",
+        "rootDir": ".",
+        "outDir": "dist",
+        "strict": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "skipDefaultLibCheck": true
+    },
+    "include": ["src/**/*", "scripts/**/*"]
+}

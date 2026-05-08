@@ -1,0 +1,29 @@
+services:
+  mongo: 
+    image: mongo:latest
+    container_name: pokemon-mongo
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  seed:
+    build: .
+    container_name: seed
+    depends_on:
+      mongo:
+        condition: service_healthy
+    command: ["npx", "tsx", "scripts/seed.ts"]
+
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://pokemon-mongo:27017/mydb
+    depends_on:
+      seed:
+        condition: service_completed_successfully

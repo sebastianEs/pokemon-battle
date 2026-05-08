@@ -5,9 +5,11 @@
   "license": "ISC",
   "author": "Sebastian Estrada",
   "type": "commonjs",
-  "main": "server.ts",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "dev": "tsx watch server.ts"
   },
   "dependencies": {
     "fastify": "^5.8.5",
