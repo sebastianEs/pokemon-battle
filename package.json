@@ -5,12 +5,12 @@
   "license": "ISC",
   "author": "Sebastian Estrada",
   "type": "commonjs",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "seed": "node dist/scripts/seed.js",
     "build": "tsc",
-    "dev": "tsx watch server.ts"
+    "dev": "tsx watch src/server.ts"
   },
   "dependencies": {
     "fastify": "^5.8.5",

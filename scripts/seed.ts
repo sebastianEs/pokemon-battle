@@ -41,4 +41,4 @@ const seed = async (): Promise<void> => {
 seed().catch(err => {
     console.error('Error seeding data:', err)
     process.exit(1)
-    });
+});
