@@ -1,0 +1,22 @@
+{
+  "name": "pokemon-battle",
+  "version": "1.0.0",
+  "description": "this is a codeing challenge using Typescript and Node.js",
+  "license": "ISC",
+  "author": "Sebastian Estrada",
+  "type": "commonjs",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fastify": "^5.8.5",
+    "mongoose": "^8.23.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2"
+  }
+}
